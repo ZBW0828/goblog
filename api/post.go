@@ -13,6 +13,7 @@ import (
 	"time"
 )
 
+//实现了获取文章、保存或更新文章以及搜索文章的功能
 func (*Api) GetPost(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 	pIdStr := strings.TrimPrefix(path, "/api/v1/post")

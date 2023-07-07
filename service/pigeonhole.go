@@ -6,6 +6,7 @@ import (
 	"go-blog/models"
 )
 
+//获取文章的归档信息，包括按照月份归档的文章列表和所有的分类列表。
 func FindPostPigeonhole() models.PigeonholeRes {
 	//查询所有文章，进行月份整理
 	//查询所以分类

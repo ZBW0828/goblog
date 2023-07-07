@@ -12,6 +12,7 @@ import (
 
 var Template models.HtmlTemplate
 
+//帮助处理常见的操作，如加载模板、解析 JSON 参数以及返回错误和成功的结果
 func LoadTemplate() {
 	//初始化
 	w := sync.WaitGroup{}

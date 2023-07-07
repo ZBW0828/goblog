@@ -7,6 +7,7 @@ import (
 	"html/template"
 )
 
+//获取首页的全部信息，包括分类列表、文章列表、分页信息等，并将这些信息封装在 models.HomeResponse 类型的对象中返回。
 func GetAllIndexInfo(slug string, page, pageSize int) (*models.HomeResponse, error) {
 	categorys, err := dao.GetAllCategory()
 	if err != nil {

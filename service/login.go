@@ -7,6 +7,7 @@ import (
 	"go-blog/utils"
 )
 
+//处理用户登录操作，包括验证用户名和密码是否正确、生成访问令牌以及返回用户信息和访问令牌。
 func Login(userName, passwd string) (*models.LoginRes, error) {
 	passwd = utils.Md5Crypt(passwd, "mszlu")
 	user := dao.GetUser(userName, passwd)

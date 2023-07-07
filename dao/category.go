@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+//对数据库中分类信息的访问，可以根据分类的 ID 查询分类名称，或者获取所有的分类信息列表。
 func GetCategoryNameById(cId int) string {
 	row := DB.QueryRow("select name from blog_category where cid=?", cId)
 	if row.Err() != nil {

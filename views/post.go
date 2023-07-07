@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+//处理文章详情页面的请求，从请求中获取文章的 ID，并调用服务层的函数获取文章的详细信息。然后，将详细信息写入响应。
 func (*HTMLApi) Detail(w http.ResponseWriter, r *http.Request) {
 	detail := common.Template.Detail
 	//获取路径参数

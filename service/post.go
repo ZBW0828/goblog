@@ -8,6 +8,7 @@ import (
 	"log"
 )
 
+//提供了对文章的保存、更新、获取详情和搜索等操作，用于在应用程序中进行相关功能的处理。
 func SavePost(post *models.Post) {
 	dao.SavePost(post)
 }

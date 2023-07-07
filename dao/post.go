@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+//对数据库中文章信息的访问和操作，包括更新文章、保存新的文章、根据条件搜索文章以及获取特定分类或slug的分页文章等。
 func UpdatePost(post *models.Post) {
 	_, err := DB.Exec("update blog_post set title=?,content=?,markdown=?,category_id=?,type=?,slug=?,update_at=?,where pid=?",
 		post.Title,

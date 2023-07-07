@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+//对数据库中用户信息的访问，可以根据用户 ID 查询用户名，或者根据用户名和密码查询用户信息。
 func GetUserNameById(userId int) string {
 
 	row := DB.QueryRow("select user_name from blog_user where uid=?", userId)

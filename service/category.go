@@ -7,6 +7,8 @@ import (
 	"html/template"
 )
 
+//根据分类 ID 获取该分类下的文章列表，以及相关的分页信息和分类信息。
+//返回的数据结构是 models.CategoryResponse 类型，其中包含了文章列表、分页信息和分类信息。
 func GetPostsByCategoryId(cId, page, pageSize int) (*models.CategoryResponse, error) {
 	categorys, err := dao.GetAllCategory()
 	if err != nil {

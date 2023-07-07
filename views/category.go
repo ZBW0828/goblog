@@ -10,6 +10,8 @@ import (
 	"strings"
 )
 
+//处理分类页面的请求，从请求中获取分类 ID、页码和其他参数，
+//并使用 service.GetPostsByCategoryId 函数获取相应的分类页面数据。然后，将数据写入响应中。
 func (*HTMLApi) Category(w http.ResponseWriter, r *http.Request) {
 	categoryTemplate := common.Template.Category
 	path := r.URL.Path

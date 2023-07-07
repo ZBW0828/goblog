@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+//处理首页的请求，从请求中获取参数，调用服务层的函数获取首页所需的数据，并将数据写入响应。
 func (*HTMLApi) Index(w http.ResponseWriter, r *http.Request) {
 	index := common.Template.Index
 	//页面上涉及到的所有的数据，必须有定义

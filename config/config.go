@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+//定义了一个配置文件的结构和全局变量 Cfg，并提供了初始化函数来读取和解析配置文件。通过这些配置信息，应用程序可以根据需要进行自定义设置。
 type tomlConfig struct {
 	Viewer Viewer
 	System SystemConfig
